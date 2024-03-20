@@ -8,7 +8,7 @@ const ProductInfo = () => {
   const handleClick = () => {
     localStorage.setItem("products", JSON.stringify(products));
   };
-  
+
   useEffect(() => {
       setProducts([...products, product]);
   }, []);
@@ -17,17 +17,17 @@ const ProductInfo = () => {
     <div className="container product__container">
       <div className="product_img">
         <div className="product_img_box">
-          <img src={product.image} alt="" className="secondry_img" />
-          <img src={product.image} alt="" className="secondry_img" />
-          <img src={product.image} alt="" className="secondry_img" />
-          <img src={product.image} alt="" className="secondry_img" />
+          <img src={product?.image} alt="" className="secondry_img" />
+          <img src={product?.image} alt="" className="secondry_img" />
+          <img src={product?.image} alt="" className="secondry_img" />
+          <img src={product?.image} alt="" className="secondry_img" />
         </div>
-        <img src={product.image} alt="" className="main_img" />
+        <img src={product?.image} alt="" className="main_img" />
       </div>
       <div className="data_product_card__body">
-        <h2>{product.name}</h2>
-        <h4>Rp {product.price}</h4>
-        <p>{product.description}</p>
+        <h2 className="product_info_title">{product?.name}</h2>
+        <h4 className="product_info_price">Rp {product?.price}</h4>
+        <p>{product?.description}</p>
         <button className="product__btn" onClick={handleClick}>
           Add To Cart
         </button>

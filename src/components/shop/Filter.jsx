@@ -4,6 +4,10 @@ import filter3 from "../../assets/images/filter3_img.svg";
 import "../../SASS/shop/Filter.scss";
 
 const Filter = () => {
+  const handleSelect = (e) => {
+    const text = e.target.value.toLowerCase()
+    console.log(text);
+  }
   return (
     <div className="filter">
       <div className="container filter__container">
@@ -13,7 +17,7 @@ const Filter = () => {
               <div className="filter_img_box">
                 <img src={filter} alt="" />
               </div>
-              <select className="filter_select">
+              <select className="filter_select" onChange={handleSelect}>
                 <option value="Filter">Filter</option>
                 <option value="Desk">Desk</option>
                 <option value="Chair">Chair</option>
