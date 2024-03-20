@@ -1,4 +1,9 @@
-
+.product_item__container{
+    padding-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 .product_item_img{
     width: 100%;
@@ -47,4 +52,23 @@ table{
 }
 td{
     padding: 20px 0;
+}
+.card_costs_box{
+    background-color: #F9F1E7;
+    width: 100%;
+    max-width: 393px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0 45px;
+}
+.card_costs{
+    display: flex;
+    flex-direction: column;
+}
+.cost_box{
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
 }
