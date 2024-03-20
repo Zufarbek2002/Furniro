@@ -8,7 +8,7 @@ const HeroComp = () => {
         <h2 className="hero_shop__title">Shop</h2>
         <div className="hero__link_box">
         <Link to="/" className='hero__link'>Home</Link>
-        <span>></span>
+        <span>&gt;</span>
         <p className='hero__text'>Shop</p>
         </div>
       </div>
