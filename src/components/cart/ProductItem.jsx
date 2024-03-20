@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "../../SASS/cart/Cart.scss";
 
 const ProductItem = () => {
-  // const [count, setCount] = useState(1)
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     setProducts(JSON.parse(localStorage.getItem("products")));
   }, []);
@@ -28,9 +28,11 @@ const ProductItem = () => {
     setProducts(products=>
         products.filter((pr) =>
         pr.id !== id ? {...pr, pr} : '')
-    );
+        );
+    };
+    useEffect(()=>{
     localStorage.setItem('products', JSON.stringify(products))
-  };
+})
 
   return (
     <div>
